@@ -44,8 +44,12 @@ def fetch_death_rates():
 
     # select columns for the `IMR`, `NMR`, `U5MR` indicators
     # and keep only rows with median rates
-    relevant_columns = [col for col in death_rates.columns if any(type_ in col for type_ in ('U5MR', 'IMR', 'NMR'))]
-    death_rates = death_rates.loc[(death_rates['Uncertainty bounds*'] == 'Median'), relevant_columns]
+    relevant_columns = \
+        [col for col in death_rates.columns
+         if any(type_ in col for type_ in ('U5MR', 'IMR', 'NMR'))]
+    death_rates = \
+        death_rates.loc[(death_rates['Uncertainty bounds*'] == 'Median'),
+                        relevant_columns]
 
     # generate MultiIndex for ISO code and year
     split_cols = [split_type_year(col) for col in death_rates.columns]
