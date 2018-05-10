@@ -2,6 +2,16 @@
 
 Loads global death rates between 1970 and 2015 and provides data via HTTP.
 
+# Install
+
+Depends in Python 3.6.
+
+```
+virtualenv -p python3.6 venv
+source ./venv/bin/activate
+pip install -r requirements.txt
+```
+
 # Usage
 
 ## Start Server
