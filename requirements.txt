@@ -16,7 +16,7 @@ numpy==1.14.3
 pandas==0.22.0
 pathtools==0.1.2
 pluggy==0.6.0
-py==1.5.3
+py==1.10.0
 pytest==3.5.1
 pytest-mock==1.10.0
 pytest-watch==4.1.0
